@@ -79,7 +79,7 @@ public class IsInterleave {
         }
         //当i2到了末尾
         if (s2.length() == i2) {
-            //只移动i2
+            //只移动i1
             for (int i = i1, len = s1.length(), j = i3; i < len; i++, j++) {
                 if (s1.charAt(i) != s3.charAt(j)) {
                     return false;
@@ -137,7 +137,7 @@ public class IsInterleave {
     }
 
     /**
-     * 广度优先遍历
+     * 广度优先遍历  层序遍历
      */
     public static boolean isInterleave3(String s1, String s2, String s3) {
         if (s1 == null) {

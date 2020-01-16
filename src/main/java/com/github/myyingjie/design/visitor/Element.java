@@ -5,5 +5,5 @@ package com.github.myyingjie.design.visitor;
  */
 public interface Element {
 
-    public abstract void accept(Visitor visitor);
+   void accept(Visitor visitor);
 }

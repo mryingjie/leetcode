@@ -47,7 +47,6 @@ public class LongestPalindrome {
                 //判断当前以及剩下的所有中心点是不是已经没有可能比当前最长回文子串长
                 k = (Math.min(center, chars.length - center - 1) << 1) + 1;
                 if (k <= len) {
-                    System.out.println("break");
                     break;
                 }
                 //当n是偶数的时候 中心点落在在字符数组上

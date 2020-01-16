@@ -15,7 +15,7 @@ import java.util.Map;
 public class NumDistinct {
 
     public static void main(String[] args) {
-        System.out.println(numDistinct3("bbg", "b"));
+        System.out.println(numDistinct3("ABCABDC", "ABC"));
     }
 
     /**

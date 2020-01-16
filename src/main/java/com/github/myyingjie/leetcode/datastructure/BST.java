@@ -24,7 +24,7 @@ public class BST<T extends Comparable> {
     public static void main(String[] args) {
         Integer[] arr = {6,10, 15,2, 8, 1, 3, 7, 9};
         BST<Integer> integerBST = new BST<>(arr);
-        System.out.println(integerBST.seqTraverse());
+        System.out.println(integerBST.inorderTraversal());
 
         boolean delete = integerBST.delete(10);
         System.out.println(delete);
