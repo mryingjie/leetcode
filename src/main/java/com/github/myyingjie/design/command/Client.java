@@ -11,7 +11,7 @@ public class Client {
 
         calculator.addCommand(new SubCommand(2));
         calculator.addCommand(new AddCommand(4));
-        calculator.addCommand(new SubCommand(10));
+        calculator.addCommand(new SubCommand(10),new AddCommand(5));
         calculator.execute();
 
         System.out.println(calculator.getValue());

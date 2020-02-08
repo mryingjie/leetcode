@@ -5,7 +5,7 @@ import java.util.Iterator;
 /**
  * created by Yingjie Zheng at 2019-09-16 09:46
  */
-public class Main {
+public class MainClient {
 
 
     public static void main(String[] args) {

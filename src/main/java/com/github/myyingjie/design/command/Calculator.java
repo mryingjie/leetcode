@@ -1,6 +1,7 @@
 package com.github.myyingjie.design.command;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * created by Yingjie Zheng at 2020-01-16 14:12
@@ -22,6 +23,9 @@ public class Calculator {
 
     public void addCommand(Command command){
         commands.add(command);
+    }
+    public void addCommand(Command... commands){
+        this.commands.addAll(Arrays.asList(commands));
     }
 
     public void execute(){
