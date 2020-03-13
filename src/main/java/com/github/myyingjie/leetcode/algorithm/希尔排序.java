@@ -3,8 +3,11 @@ package com.github.myyingjie.leetcode.algorithm;
 /**
  * created by Yingjie Zheng at 2019-09-16 16:10
  * 希尔排序算法
+ *
+ * 排序算法大总结
+ * https://mp.weixin.qq.com/s/teOGQlslb6aP4AQrx7TTzA
  */
-public class ShellSort {
+public class 希尔排序 {
 
     public static void main(String[] args) {
         int[] arr = {5, 2, 8, 1, 2, 6,3};

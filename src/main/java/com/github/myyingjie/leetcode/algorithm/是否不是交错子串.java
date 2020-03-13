@@ -21,7 +21,7 @@ import java.util.Queue;
  * <p>
  * 3、广度优先遍历 BFS
  */
-public class IsInterleave {
+public class 是否不是交错子串 {
 
     public static void main(String[] args) {
         System.out.println(isInterleave3("aba", "baa", "abaaba"));

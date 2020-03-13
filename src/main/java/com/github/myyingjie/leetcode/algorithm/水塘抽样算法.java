@@ -13,7 +13,7 @@ import java.util.*;
  * 则当遇到第i个数时  它被选取的概率都是k/i  保持原有选择的概率是1-k/i
  *
  */
-public class RandomPondSampling {
+public class 水塘抽样算法 {
 
     public static void main(String[] args) {
         Iterator<Integer> iterator = Arrays

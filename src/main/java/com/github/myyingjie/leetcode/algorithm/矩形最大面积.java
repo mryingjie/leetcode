@@ -14,10 +14,10 @@ import java.util.Arrays;
  * 输出: 10
  * 见：https://leetcode-cn.com/problems/largest-rectangle-in-histogram/
  */
-public class LargestRectangleArea {
+public class 矩形最大面积 {
 
     public static void main(String[] args) {
-        LargestRectangleArea largestRectangleArea = new LargestRectangleArea();
+        矩形最大面积 largestRectangleArea = new 矩形最大面积();
         int[] heights = {0,9};
         System.out.println(largestRectangleArea.largestRectangleArea(heights));
 

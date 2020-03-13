@@ -16,7 +16,7 @@ package com.github.myyingjie.leetcode.algorithm;
  * 如果是 则此子dp[i] = (dp[i-1] + 2) + dp[i-dp[i-1]-2]
  * 如果不是 则dp[i] = 0
  */
-public class LongestValidParentheses {
+public class 最长有效括号的长度 {
 
     public static void main(String[] args) throws Exception {
 

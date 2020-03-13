@@ -25,7 +25,7 @@ package com.github.myyingjie.leetcode.algorithm;
  * 2、根据思路1的答案可以发现规律 其实这个数列叫作Catalan numbers，也叫Segner numbers。其第n项为
  * (2n)!/[n!(n+1)!] 或 Cn = 2*(2n+1)Cn-1 / n+2
  */
-public class NumTrees {
+public class n个数能组成的二叉树有几种 {
 
     public static void main(String[] args) {
         System.out.println(numTrees2(4));

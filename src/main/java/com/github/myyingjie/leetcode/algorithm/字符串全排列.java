@@ -1,14 +1,14 @@
 package com.github.myyingjie.leetcode.algorithm;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * created by Yingjie Zheng at 2019-09-05 14:09
  * 字符串全排列
  * 123的全排列  1 2 3， 1 3 2， 2 1 3， 2 3 1， 3 1 2 ， 3 2 1
  */
-public class FullyArranged {
+public class 字符串全排列 {
 
 
     public static void main(String[] args) {
@@ -39,6 +39,8 @@ public class FullyArranged {
         }
         return set;
     }
+
+
 
 
 

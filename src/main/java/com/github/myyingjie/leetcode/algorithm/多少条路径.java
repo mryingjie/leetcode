@@ -20,7 +20,7 @@ package com.github.myyingjie.leetcode.algorithm;
  * 当i = 0时
  * dp[0][j] = 1
  */
-public class UniquePaths {
+public class 多少条路径 {
 
     public static void main(String[] args) {
         System.out.println(uniquePaths(4, 4));

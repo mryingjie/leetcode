@@ -6,7 +6,7 @@ package com.github.myyingjie.leetcode.algorithm;
  * 给定 nums = [0,1,2,2,3,0,4,2], val = 2,
  * 函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。
  */
-public class RemoveElement {
+public class 删除指定元素 {
 
     public static void main(String[] args) {
         int[] arr = {0, 1, 2, 2, 3, 0, 4, 2};

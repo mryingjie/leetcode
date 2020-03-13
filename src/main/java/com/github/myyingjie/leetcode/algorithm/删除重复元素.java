@@ -7,19 +7,17 @@ package com.github.myyingjie.leetcode.algorithm;
  *
  * 函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
  */
-public class RemoveDuplicates {
+public class 删除重复元素 {
 
     public static void main(String[] args) {
         int[] arr= {0,0,1,1,1,2,2,3,3,4};
         int i = removeDuplicates(arr);
         System.out.println(i);
-
     }
 
 
     public static int removeDuplicates(int[] arr) {
         if (arr == null || arr.length == 0) return 0;
-
         int i = 0;
         int j = 0;
         while (j < arr.length) {
@@ -28,8 +26,6 @@ public class RemoveDuplicates {
             }
             j++;
         }
-
-
         return i + 1;
     }
 

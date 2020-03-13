@@ -12,7 +12,7 @@ import java.util.Map;
  * 一个字符串的一个子序列是指，通过删除一些（也可以不删除）字符且不干扰剩余字符相对位置所组成的新字符串。（例如，"ACE" 是 "ABCDE" 的一个子序列，而 "AEC" 不是）
  */
 @SuppressWarnings("all")
-public class NumDistinct {
+public class 字符串子序列出现的次数 {
 
     public static void main(String[] args) {
         System.out.println(numDistinct3("ABCABDC", "ABC"));

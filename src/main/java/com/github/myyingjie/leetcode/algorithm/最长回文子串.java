@@ -18,7 +18,7 @@ package com.github.myyingjie.leetcode.algorithm;
  * * 空间复杂度：O(n）
  * 这里只实现解法一
  */
-public class LongestPalindrome {
+public class 最长回文子串 {
 
 
     public static void main(String[] args) {

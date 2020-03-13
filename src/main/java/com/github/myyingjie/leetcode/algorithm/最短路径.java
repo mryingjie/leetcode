@@ -23,7 +23,7 @@ package com.github.myyingjie.leetcode.algorithm;
  * dp[0][j] = dp[0][j-1] + grid[0][j]
  * dp[i][0] = dp[i-1][0] + grid[i][0]
  */
-public class MinPathSum {
+public class 最短路径 {
 
     public static void main(String[] args) {
         int[][] grid = {

@@ -8,7 +8,7 @@ import java.util.Set;
  * 全组合
  * abc-->  a  b  c  ab  ac  bc  abc
  */
-public class FullCombination {
+public class 字符串全组合 {
 
     public static void main(String[] args) {
         System.out.println(fullCombination("aba"));

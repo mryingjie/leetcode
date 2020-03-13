@@ -23,7 +23,7 @@ package com.github.myyingjie.leetcode.algorithm;
  * 3、最终的结果:dp[m]
  *
  */
-public class CoinChange {
+public class 抛硬币 {
 
 
     public static void main(String[] args) {

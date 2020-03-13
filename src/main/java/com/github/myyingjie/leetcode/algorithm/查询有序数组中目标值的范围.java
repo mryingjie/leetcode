@@ -10,7 +10,7 @@ import com.github.myyingjie.common.Tuple2;
  * <p>
  * 第二种方法二分法  时间复杂度为O(log n)
  */
-public class SearchRange {
+public class 查询有序数组中目标值的范围 {
 
     public static void main(String[] args) {
         int[] arr = {5,7,7,7,8,8,10};

@@ -20,7 +20,7 @@ import java.util.List;
  * 
  * 标准等边三角形 底边和高度一定一样
  */
-public class MinimumTotal {
+public class 三角形最小路径和 {
 
     public static void main(String[] args) {
         int[][] triangle = {

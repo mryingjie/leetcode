@@ -52,7 +52,7 @@ package com.github.myyingjie.leetcode.algorithm;
  * dp[n,0] = max(dp[n-1,0],dp[n-1,1] + prices(n))
  * dp[n,1] = max(dp[n-1,1],- prices(n))
  */
-public class MaxProfit {
+public class 股票最大收益 {
 
     public static void main(String[] args) {
         int[] prices = {1,2};

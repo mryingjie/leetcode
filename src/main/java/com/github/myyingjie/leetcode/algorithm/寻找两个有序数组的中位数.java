@@ -6,7 +6,7 @@ package com.github.myyingjie.leetcode.algorithm;
  * <p>
  * 使用二分法
  */
-public class MedianSortedArrays {
+public class 寻找两个有序数组的中位数 {
 
     public static void main(String[] args) {
         int[] arr1 = {1};

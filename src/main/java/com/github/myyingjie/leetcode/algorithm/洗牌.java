@@ -22,7 +22,7 @@ import java.util.Random;
  * 最后的一次循环可省略 即 5 * 4 * 3 * 2
  *
  */
-public class Shuffle {
+public class 洗牌 {
 
     public static void main(String[] args) {
         Integer[] ints = {1, 2, 3, 3, 5, 2};

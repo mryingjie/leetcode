@@ -3,7 +3,7 @@ package com.github.myyingjie.leetcode.algorithm;
 /**
  * created by Yingjie Zheng at 2019-09-20 14:39
  */
-public class minEditDistance {
+public class 最小编辑距离 {
 
     public static void main(String[] args) {
         String word1 = "horse";
