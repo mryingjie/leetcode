@@ -1,4 +1,6 @@
-package com.github.myyingjie.leetcode.algorithm;
+package com.github.myyingjie.leetcode.algorithm.sort;
+
+import java.util.Arrays;
 
 /**
  * created by Yingjie Zheng at 2019-09-16 16:10
@@ -12,7 +14,7 @@ public class 希尔排序 {
     public static void main(String[] args) {
         int[] arr = {5, 2, 8, 1, 2, 6,3};
         shellSort(arr);
-        System.out.println(5 >> 1);
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void shellSort(int[] arr) {

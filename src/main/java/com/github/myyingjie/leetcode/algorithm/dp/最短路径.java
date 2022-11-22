@@ -1,4 +1,4 @@
-package com.github.myyingjie.leetcode.algorithm;
+package com.github.myyingjie.leetcode.algorithm.dp;
 
 /**
  * created by Yingjie Zheng at 2019-09-20 11:07

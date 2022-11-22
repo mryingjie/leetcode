@@ -1,15 +1,14 @@
-package com.github.myyingjie.leetcode.algorithm;
+package com.github.myyingjie.leetcode.algorithm.dp;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * created by Yingjie Zheng at 2019-09-27 09:34
  * 115. 不同的子序列
- * 给定一个字符串 S 和一个字符串 T，计算在 S 的子序列中 T 出现的个数。
+ * 给定一个字符串 S 和一个字符串 T，计算在 S 的子序列中 T 出现的个数。
  * <p>
- * 一个字符串的一个子序列是指，通过删除一些（也可以不删除）字符且不干扰剩余字符相对位置所组成的新字符串。（例如，"ACE" 是 "ABCDE" 的一个子序列，而 "AEC" 不是）
+ * 一个字符串的一个子序列是指，通过删除一些（也可以不删除）字符且不干扰剩余字符相对位置所组成的新字符串。（例如，"ACE"是"ABCDE"的一个子序列，而 "AEC" 不是）
  */
 @SuppressWarnings("all")
 public class 字符串子序列出现的次数 {

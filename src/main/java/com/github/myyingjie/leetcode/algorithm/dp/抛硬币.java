@@ -1,4 +1,6 @@
-package com.github.myyingjie.leetcode.algorithm;
+package com.github.myyingjie.leetcode.algorithm.dp;
+
+import java.util.Arrays;
 
 /**
  * created by Yingjie Zheng at 2019-09-19 14:58
@@ -16,9 +18,11 @@ package com.github.myyingjie.leetcode.algorithm;
  *
  *  dp[m] = min(d[m],d[m-ci] + 1)//解释：当选取的金额最大为10时的硬币数量 = min(之前存储的最小数量,没有选择当前硬币的最小数量 + 1)
  *
+ * 当 金额比硬币值小时，结果不存在用极大值表示，当用min函数时，极大值一定不会被选中 此处使用Integer.MAX_VALUE - 1是因为Integer.MAX_VALUE + 1会变成负数
+ * 当 dp[m-ci] 不存在时 dp[m]一定不存在
  * 2、分析最基本的几种情况
  * dp[0] = 0;
- * 最差的情况 d[m] = m 目标是找到比最差的情况好的情况
+ * 当ci = m时  dp[m] == 1
  *
  * 3、最终的结果:dp[m]
  *
@@ -28,22 +32,30 @@ public class 抛硬币 {
 
     public static void main(String[] args) {
         int[] coins = {2, 4};
-        System.out.println(coinChange(coins, 8));
+        System.out.println(coinChange(coins, 6));
     }
 
     public static int coinChange(int[] coins,int amount){
-        int[] dp = new int[amount + 1];
-        for (int i = 0; i < dp.length; i++) {
-            dp[i] = amount;
-        }
+        int[] dp = new int[amount+1];
+        Arrays.fill(dp,Integer.MAX_VALUE - 1);
         dp[0] = 0;
         for (int m = 1; m <= amount; m++) {
-            for (int ci : coins) {
-                if(ci > m) continue;
-                dp[m] = Math.min(dp[m],dp[m-ci] + 1);
+            for (int j = 0; j < coins.length; j++) {
+                int ci = coins[j];
+                if(ci > m){
+                    continue;
+                }
+                if(ci == m){
+                    dp[m] = 1;
+                    break;
+                }
+                dp[m] = Math.min(dp[m-ci] + 1,dp[m]);
             }
+
         }
-        return dp[amount] == amount? -1 : dp[amount];
+
+
+        return dp[amount] == Integer.MAX_VALUE - 1? -1 : dp[amount];
     }
 
 }

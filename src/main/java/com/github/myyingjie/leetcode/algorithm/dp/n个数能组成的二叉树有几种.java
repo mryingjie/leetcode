@@ -1,4 +1,4 @@
-package com.github.myyingjie.leetcode.algorithm;
+package com.github.myyingjie.leetcode.algorithm.dp;
 
 /**
  * created by Yingjie Zheng at 2019-09-26 10:29
@@ -28,7 +28,7 @@ package com.github.myyingjie.leetcode.algorithm;
 public class n个数能组成的二叉树有几种 {
 
     public static void main(String[] args) {
-        System.out.println(numTrees2(4));
+        System.out.println(numTrees1(4));
     }
 
     public static int numTrees1(int n) {

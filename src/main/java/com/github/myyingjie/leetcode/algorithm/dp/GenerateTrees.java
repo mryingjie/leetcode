@@ -1,4 +1,4 @@
-package com.github.myyingjie.leetcode.algorithm;
+package com.github.myyingjie.leetcode.algorithm.dp;
 
 import com.github.myyingjie.common.TreeNode;
 

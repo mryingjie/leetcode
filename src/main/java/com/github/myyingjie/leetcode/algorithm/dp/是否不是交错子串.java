@@ -1,4 +1,4 @@
-package com.github.myyingjie.leetcode.algorithm;
+package com.github.myyingjie.leetcode.algorithm.dp;
 
 import com.github.myyingjie.common.Tuple2;
 
@@ -17,7 +17,7 @@ import java.util.Queue;
  * dp[i][j] 表示s1[0-i)与s2[0-j) 是否能符合s3[0-(i+j))
  * 则dp[i][j]如果为true 则他的左边或上边必须有一个为true 且 为true的那个往坐标为i,j移动时 对应的字符必须相等
  * 总结
- * dp[i][j] = (dp[i-1][j] && s1.chartAt(i-1) == s3.chartAt(i + j -1)) || (dp[i][j-1] && s2.chartAt(j-1) == s3.chartAt(i + j - 1))
+ * dp[i][j] = (dp[i-1][j] && s1.chartAt(i-1) == s3.chartAt(i + j - 1)) || (dp[i][j-1] && s2.chartAt(j-1) == s3.chartAt(i + j - 1))
  * <p>
  * 3、广度优先遍历 BFS
  */

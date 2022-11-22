@@ -3,10 +3,7 @@ package com.github.myyingjie.leetcode.datastructure;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * created by Yingjie Zheng at 2019-09-30 13:48
@@ -24,14 +21,16 @@ public class BST<T extends Comparable> {
     public static void main(String[] args) {
         Integer[] arr = {6,10, 15,2, 8, 1, 3, 7, 9};
         BST<Integer> integerBST = new BST<>(arr);
+        // 前序遍历
+        System.out.println(integerBST.preorderTraversal());
+        System.out.println(integerBST.preorderTraversal2());
+
+
+        System.out.println(integerBST.postorderTraversal());
+        System.out.println(integerBST.postorderTraversal2());
+
         System.out.println(integerBST.inorderTraversal());
 
-        boolean delete = integerBST.delete(10);
-        System.out.println(delete);
-
-
-        System.out.println(integerBST.getMax());
-        System.out.println(integerBST.getMin());
     }
 
     private Node root;
@@ -267,6 +266,28 @@ public class BST<T extends Comparable> {
         preorderTraversalBase(root.right, list);
     }
 
+    // 前序遍历 利用栈的迭代法
+    public List<T> preorderTraversal2() {
+        List<T> list = new ArrayList<>();
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()){
+            Node pop = stack.pop();
+            list.add(pop.t);
+            if(Objects.nonNull(pop.right)){
+                stack.push(pop.right);
+            }
+            if(Objects.nonNull(pop.left)){
+                stack.push(pop.left);
+            }
+        }
+
+        return list;
+    }
+
+
+
+
     /**
      * 后续遍历
      */
@@ -284,6 +305,26 @@ public class BST<T extends Comparable> {
         postorderTraversalBase(root.left, list);
         postorderTraversalBase(root.right, list);
         list.add(root.t);
+    }
+
+    /**
+     * 后续遍历
+     */
+    public List<T> postorderTraversal2() {
+        List<T> list = new ArrayList<>();
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()){
+            Node pop = stack.pop();
+            if(Objects.nonNull(pop.left)){
+                stack.push(pop.left);
+            }
+            if(Objects.nonNull(pop.right)){
+                stack.push(pop.right);
+            }
+            list.add(0,pop.t);
+        }
+        return list;
     }
 
     /**

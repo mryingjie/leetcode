@@ -1,4 +1,4 @@
-package com.github.myyingjie.leetcode.algorithm;
+package com.github.myyingjie.leetcode.algorithm.sort;
 
 import java.util.*;
 

@@ -8,7 +8,7 @@ public class 二分查找 {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        System.out.println(binarySearch(arr, 1));
+        System.out.println(binartSearch2(arr, 10));
     }
 
     public static int binarySearch(int[] arr, int v) {
@@ -50,6 +50,26 @@ public class 二分查找 {
         }
 
         return binarySearch(arr, mid + 1 ,end,v);
+    }
+
+
+    public static int binartSearch2(int[] arr, int v){
+        return binarySearchBase(arr,0,arr.length -1 ,v);
+    }
+
+    public static int binarySearchBase(int[] arr, int start, int end, int v){
+        if(start == end && arr[start] != v){
+            return -1;
+        }
+        int mid = (start + end) / 2;
+        if(arr[mid] == v){
+            return mid;
+        }else if(arr[mid] > v){
+            return binarySearchBase(arr,start,mid - 1, v);
+        }else {
+            return binarySearchBase(arr,mid + 1,end,v);
+        }
+
     }
 
 

@@ -1,6 +1,4 @@
-package com.github.myyingjie.leetcode.algorithm;
-
-import java.util.List;
+package com.github.myyingjie.leetcode.algorithm.dp;
 
 /**
  * created by Yingjie Zheng at 2019-09-30 11:21
@@ -14,13 +12,13 @@ import java.util.List;
  *    [6,5,7],
  *   [4,1,8,3]
  * ]
- * 自顶向下的最小路径和为 11（即，2 + 3 + 5 + 1 = 11）。
+ * 自顶向下的最小路径和为11（即，2+3+5+1= 11）。
  *
  * 120. 三角形最小路径和
  * 
  * 标准等边三角形 底边和高度一定一样
  */
-public class 三角形最小路径和 {
+public class 三角形最小路径和_dp {
 
     public static void main(String[] args) {
         int[][] triangle = {

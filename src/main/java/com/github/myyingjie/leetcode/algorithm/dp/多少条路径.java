@@ -1,4 +1,4 @@
-package com.github.myyingjie.leetcode.algorithm;
+package com.github.myyingjie.leetcode.algorithm.dp;
 
 /**
  * created by Yingjie Zheng at 2019-09-20 10:14
@@ -23,7 +23,7 @@ package com.github.myyingjie.leetcode.algorithm;
 public class 多少条路径 {
 
     public static void main(String[] args) {
-        System.out.println(uniquePaths(4, 4));
+        System.out.println(uniquePaths(3, 3));
 
         int[][] map = {
                 {0,0,0},

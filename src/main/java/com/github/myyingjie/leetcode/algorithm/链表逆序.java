@@ -16,7 +16,7 @@ public class 链表逆序 {
         head.next.next.next.next = new Node<>(5);
         head.next.next.next.next.next = new Node<>(6);
         head.next.next.next.next.next.next = new Node<>(7);
-        head = reverseLinkedList(head);
+        head = reverseLinkedList2(head);
         Node<Integer> node = head;
         System.out.println(head.data);
         do {
@@ -26,7 +26,7 @@ public class 链表逆序 {
 
     }
 
-
+    //
     public static <T> Node<T> reverseLinkedList(Node<T> head) {
         Node<T> a = head;
         Node<T> b = a.next;
@@ -35,10 +35,8 @@ public class 链表逆序 {
 
         while (b != null) {
             c = b.next;
-
             b.next = a;
             // c.next = b;
-
             a = b;
             b = c;
         }
@@ -63,5 +61,24 @@ public class 链表逆序 {
 
         }
     }
+
+
+    public static <T> Node<T> reverseLinkedList2(Node<T> head) {
+        Node<T> p1 = head;
+        Node<T> p2 = p1.next;
+        Node<T> p3 = null;
+
+        while (p2 != null){
+            p3 = p2.next;
+            p2.next = p1;
+            p1 = p2;
+            p2 = p3;
+        }
+
+        head.next = null;
+        head = p1;
+        return head;
+    }
+
 
 }

@@ -2,6 +2,8 @@ package com.github.myyingjie.leetcode.thread;
 
 import lombok.AllArgsConstructor;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 /**
  * created by Yingjie Zheng at 2019-09-04 16:29
  *
@@ -13,6 +15,7 @@ import lombok.AllArgsConstructor;
 public class FooBarVolatile {
 
     private int n;
+
 
 
     private volatile int state = 1;

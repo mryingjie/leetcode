@@ -9,13 +9,13 @@ import java.util.List;
 /**
  * created by Yingjie Zheng at 2019-09-10 10:40
  * <p>
- * 给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 指定的数 ？
+ * 给定一个包含 n 个整数的数组nums，判断nums中是否存在三个元素 a，b，c ，使得a + b + c = 指定的数 ？
  * 找出所有满足条件且不重复的三元组。
  */
 public class 三数之和等于指定数 {
 
     public static void main(String[] args) {
-        int[] arr = {-1, 0, 1, 2, -1, -4,5};
+        int[] arr = {-1, 0, 1, 2, 2,-1, -4,5,5};
         System.out.println(threeSum(arr, 1));
     }
 

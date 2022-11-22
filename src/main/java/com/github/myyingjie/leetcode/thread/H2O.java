@@ -28,6 +28,8 @@ public class H2O {
         new H2O().h2o("HHHOOHHHHOOH");
     }
 
+
+
     public void h2o(String str) {
         Semaphore semO = new Semaphore(2);
         Semaphore semH = new Semaphore(2);
@@ -39,10 +41,7 @@ public class H2O {
         }
         Map<Character, Integer> countMap = new HashMap<Character, Integer>();
         for (char c : chars) {
-            if (countMap.get(c) == null)
-                countMap.put(c, 1);
-            else
-                countMap.put(c, countMap.get(c) + 1);
+            countMap.merge(c, 1, Integer::sum);
         }
         if(countMap.get('O') == null || countMap.get('H') == null){
             throw new RuntimeException("H or O is empty");

@@ -3,7 +3,9 @@ package com.github.myyingjie.leetcode.algorithm;
 import com.github.myyingjie.common.Tuple2;
 import com.github.myyingjie.leetcode.datastructure.MinLineSegmentTree;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Deque;
 
 /**
  * created by Yingjie Zheng at 2019-09-25 10:40
@@ -18,9 +20,29 @@ public class 矩形最大面积 {
 
     public static void main(String[] args) {
         矩形最大面积 largestRectangleArea = new 矩形最大面积();
-        int[] heights = {0,9};
-        System.out.println(largestRectangleArea.largestRectangleArea(heights));
+        int[] heights = {2,1,5,6,2,3};
+        System.out.println(largestRectangleArea.largestRectangleArea2(heights));
 
+    }
+
+
+    public int largestRectangleArea2(int[] heights) {
+        int res = 0;
+        Deque<Integer> stack = new ArrayDeque<>();
+        int[] new_heights = new int[heights.length + 2];
+        for (int i = 1; i < heights.length + 1; i++) {
+            new_heights[i] = heights[i - 1];
+        }
+        for (int i = 0; i < new_heights.length; i++) {
+            while (!stack.isEmpty() && new_heights[stack.peek()] > new_heights[i]) {
+                int cur = stack.pop();
+                int l = stack.peek();
+                int r = i;
+                res = Math.max(res, (r - l - 1) * new_heights[cur]);
+            }
+            stack.push(i);
+        }
+        return res;
     }
 
     public int largestRectangleArea(int[] heights) {
