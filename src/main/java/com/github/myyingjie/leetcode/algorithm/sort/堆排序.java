@@ -53,7 +53,7 @@ public class 堆排序 {
      */
     public static void buildMinHeap(int[] arr){
         // 从最后一个非叶子节点  刚好是数组长度的一半的位置-1 依次下沉调整
-        for(int i = arr.length >> 1 ; i > 0 ;i--){
+        for(int i = arr.length / 2 ; i > 0 ;i--){
             downAdjust(arr,i-1,arr.length -1);
         }
     }
