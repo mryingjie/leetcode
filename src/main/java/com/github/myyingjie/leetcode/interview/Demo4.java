@@ -3,6 +3,8 @@ package com.github.myyingjie.leetcode.interview;
 import java.util.Objects;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * created by Yingjie Zheng at 2021/8/9 下午8:17
@@ -13,6 +15,7 @@ public class Demo4 {
 
     private static Queue<Object> message = new LinkedBlockingQueue<Object>();
 
+    ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1,1,2000, TimeUnit.HOURS,new LinkedBlockingQueue<>(1000));
     public static void main(String[] args) {
 
         for (int i = 0; i < 10; i++) {

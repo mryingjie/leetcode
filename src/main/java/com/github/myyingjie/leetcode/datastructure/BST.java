@@ -42,6 +42,10 @@ public class BST<T extends Comparable> {
 
     private Node root;
 
+    public Node getRoot() {
+        return root;
+    }
+
     public BST(List<T> list) {
         this((T[]) list.toArray());
     }
@@ -391,7 +395,7 @@ public class BST<T extends Comparable> {
 
     @Data
     @Accessors(chain = true)
-    private class Node implements Comparable<Node> {
+    public class Node implements Comparable<Node> {
 
         private Node left;
 
