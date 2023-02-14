@@ -1,5 +1,6 @@
 package com.github.myyingjie.leetcode.datastructure;
 
+import com.google.common.collect.Lists;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -22,18 +23,28 @@ public class BST<T extends Comparable> {
         Integer[] arr = {6,10, 15,2, 8, 1, 3, 7, 9};
         BST<Integer> integerBST = new BST<>(arr);
         // 前序遍历
-        System.out.println(integerBST.preorderTraversal());
-        System.out.println(integerBST.preorderTraversal2());
+        // System.out.println(integerBST.preorderTraversal());
+        // System.out.println(integerBST.preorderTraversal2());
+        //
+        //
+        // System.out.println(integerBST.postorderTraversal());
+        // System.out.println(integerBST.postorderTraversal2());
+        //
+        // System.out.println(integerBST.inorderTraversal());
+        //
+        //
+        // 层序遍历
 
-
-        System.out.println(integerBST.postorderTraversal());
-        System.out.println(integerBST.postorderTraversal2());
-
-        System.out.println(integerBST.inorderTraversal());
+        System.out.println(integerBST.seqTraverse());
+        System.out.println(integerBST.seqTraverse2());
 
     }
 
     private Node root;
+
+    public Node getRoot() {
+        return root;
+    }
 
     public BST(List<T> list) {
         this((T[]) list.toArray());
@@ -348,10 +359,43 @@ public class BST<T extends Comparable> {
         return list;
     }
 
+    /**
+     * 层序遍历
+     */
+    public List<List<T>> seqTraverse2(){
+        List<List<T>> list = new ArrayList<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        // last：表示当前遍历层最右结点
+        // nlast：表示下一层最右结点
+        Node last = root;
+        Node nlast = root;
+        List<T> childList = new ArrayList<>();
+        while (!queue.isEmpty()) {
+            Node t = queue.poll();
+            childList.add(t.t);
+            if (t.left != null) {
+                queue.add(t.left);
+                nlast = t.left;
+            }
+            if (t.right != null) {
+                queue.add(t.right);
+                nlast = t.right;
+            }
+            // 如果当前输出结点是最右结点，那么换行 换集合
+            if (last == t) {
+                list.add(childList);
+                childList = new ArrayList<>();
+                last = nlast;
+            }
+        }
+        return list;
+    }
+
 
     @Data
     @Accessors(chain = true)
-    private class Node implements Comparable<Node> {
+    public class Node implements Comparable<Node> {
 
         private Node left;
 

@@ -1,6 +1,8 @@
 package com.github.myyingjie.interview;
 
 
+import java.util.concurrent.ThreadPoolExecutor;
+
 /**
  * created by Yingjie Zheng at 2022/11/25 18:54
  * 
@@ -18,7 +20,7 @@ public class 对链表进行重新排序 {
         head.next.next = new Node<>(3);
         head.next.next.next = new Node<>(4);
         head.next.next.next.next = new Node<>(5);
-        // head.next.next.next.next.next = new Node<>(6);
+        head.next.next.next.next.next = new Node<>(6);
         head = reSort(head);
         Node<Integer> node = head;
         System.out.println(head.data);
@@ -45,12 +47,12 @@ public class 对链表进行重新排序 {
         Node<Integer> newHead = reverse(nextOne);
         
         // 依次合并
-        
         Node<Integer> tmp1 = head.next;
         Node<Integer> tmp2 = newHead;
         Node<Integer> indexNode = head;
         indexNode.next = tmp2;
         indexNode = indexNode.next;
+        tmp2 = tmp2.next;
         boolean chooseTmp1 = true;
         while (tmp2!=null && tmp1 != null){
             if (chooseTmp1) {
