@@ -29,7 +29,7 @@ public class 全排列 {
 
     public static void main(String[] args) {
 
-        int[] input = {2,2,3};
+        int[] input = {1,2,3};
 
         List<List<Integer>> result = array(input);
         List<List<Integer>> collect = result.stream().distinct().collect(Collectors.toList());
@@ -64,8 +64,6 @@ public class 全排列 {
             path.remove(path.size() -1);
             used[j] = false;
         }
-
-
     }
 
 }

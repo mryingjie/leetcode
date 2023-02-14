@@ -54,7 +54,7 @@ public class 组合 {
 
     public static List<List<Integer>> method2(int n, int k) {
         List<List<Integer>> result = new ArrayList<>();
-       LinkedList<Integer> path = new LinkedList<>();
+        LinkedList<Integer> path = new LinkedList<>();
 
         backtracking(n, k, 1, result, path);
         return result;
